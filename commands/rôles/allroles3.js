@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports.run = (client,message,args) => {
   const embed = new MessageEmbed()
   .setTitle("Notifications")
-  .setDescription("<a:alerte:835919931434467378> \n<a:giveaway2:835920882319884350> \n<a:love:835920118303031306>")
+  .setDescription("<a:alerte:835919931434467378> : News \n<a:giveaway2:835920882319884350> : Giveaways \n<a:love:835920118303031306> : Parteneriats")
   .setColor("#00BFFF")
 
   client.channels.cache.get('835898363152039946').send(embed).then(message => {
