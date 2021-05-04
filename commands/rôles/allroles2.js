@@ -9,7 +9,7 @@ module.exports.run = (client,message,args) => {
   const violetRole = message.guild.roles.cache.get('835933511872675850');
 
   const embed = new MessageEmbed()
-  .setTitle("Rôles")
+  .setTitle("Couleurs")
   .setDescription("Cliquez sur les réactions ci-dessous pour choisir vos couleurs")
   .setColor("#00BFFF")
 
