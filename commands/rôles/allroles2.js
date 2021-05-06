@@ -7,6 +7,11 @@ module.exports.run = (client,message,args) => {
   const vertRole = message.guild.roles.cache.get('835933371552366632');
   const bleuRole = message.guild.roles.cache.get('835933337046220880');
   const violetRole = message.guild.roles.cache.get('835933511872675850');
+  
+  if(messageReaction.partial) {
+    await messageReaction.fetch();
+    return;
+  }
 
   const embed = new MessageEmbed()
   .setTitle("Couleurs")
