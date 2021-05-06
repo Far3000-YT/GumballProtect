@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 
-module.exports.run = async (client,message,args) => {
+module.exports.run = (client,message,args) => {
   
   const embed = new MessageEmbed()
   .setTitle("Notifications")
