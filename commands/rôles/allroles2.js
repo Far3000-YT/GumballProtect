@@ -1,17 +1,12 @@
 const { MessageEmbed } = require('discord.js');
 
-module.exports.run = async (client,messageReaction,args) => {
+module.exports.run = (client,message,args) => {
   const rougeRole = message.guild.roles.cache.get('835933265328078899');
   const orangeRole = message.guild.roles.cache.get('835933437918576750');
   const jauneRole = message.guild.roles.cache.get('835933404360867922');
   const vertRole = message.guild.roles.cache.get('835933371552366632');
   const bleuRole = message.guild.roles.cache.get('835933337046220880');
   const violetRole = message.guild.roles.cache.get('835933511872675850');
-  
-  if(messageReaction.partial) {
-    await messageReaction.fetch();
-    return;
-  }
 
   const embed = new MessageEmbed()
   .setTitle("Couleurs")
