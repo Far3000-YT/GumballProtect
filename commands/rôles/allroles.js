@@ -1,12 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 
-module.exports.run = async (client,messageReaction,args) => {
+module.exports.run = (client,message,args) => {
   const valideRole = message.guild.roles.cache.get('835898952372191242');
-  
-  if(messageReaction.partial) {
-    await messageReaction.fetch();
-    return;
-  }
 
   const embed = new MessageEmbed()
   .setTitle("Vérification")
