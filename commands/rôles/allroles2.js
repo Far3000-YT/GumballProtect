@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 
-module.exports.run = async (client,message,args) => {
+module.exports.run = async (client,messageReaction,args) => {
   const rougeRole = message.guild.roles.cache.get('835933265328078899');
   const orangeRole = message.guild.roles.cache.get('835933437918576750');
   const jauneRole = message.guild.roles.cache.get('835933404360867922');
