@@ -3,7 +3,7 @@ const { TOKEN, PREFIX } = require('./config');
 const randomstring = require("randomstring");
 const { loadCommands, loadEvents } = require("./util/loader");
 
-const client = new Client();
+const client = new Client({ partials: ['MESSAGE', 'CHANNEL' ,'REACTIONS] });
 require("./util/functions")(client);
 client.mongoose = require('./util/mongoose');
 client.commands = new Collection();
