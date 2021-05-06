@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 
-module.exports.run = await (client,message,args) => {
+module.exports.run = async (client,message,args) => {
   
   if(messageReaction.partial) {
     await messageReaction.fetch();
