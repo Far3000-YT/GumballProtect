@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 
-module.exports.run = async (client,message,args) => {
+module.exports.run = async (client,messageReaction,args) => {
   const valideRole = message.guild.roles.cache.get('835898952372191242');
   
   if(messageReaction.partial) {
