@@ -1,10 +1,15 @@
 
-module.exports = (client,messageReaction, user) => {
+module.exports = async (client,messageReaction, user) => {
   const message = messageReaction.message;
   const member = message.guild.members.cache.get(user.id);
   const emoji = messageReaction.emoji.name;
   const valideRole = message.guild.roles.cache.get('835898952372191242');
   if (member.user.bot) return;
+  
+  if(messageReaction.partial) {
+    await messageReaction.fetch();
+    return;
+  }
 
   if (["valide"].includes(emoji)) {
     switch(emoji) {
@@ -23,6 +28,11 @@ module.exports = (client,messageReaction, user) => {
   const violetRole = message.guild.roles.cache.get('835933511872675850');
 
   if (member.user.bot) return;
+  
+  if(messageReaction.partial) {
+    await messageReaction.fetch();
+    return;
+  }
 
   if (["redverify","orangeverify","yellowverify","greenverify","blueverify","purpleverify"].includes(emoji)) {
     switch(emoji) {
@@ -53,6 +63,11 @@ module.exports = (client,messageReaction, user) => {
   const partRole = message.guild.roles.cache.get('835934655697125417');
 
   if (member.user.bot) return;
+  
+  if(messageReaction.partial) {
+    await messageReaction.fetch();
+    return;
+  }
 
   if (["alerte","giveaway2","love"].includes(emoji)) {
     switch(emoji) {
