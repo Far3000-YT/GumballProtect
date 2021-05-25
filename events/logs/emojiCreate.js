@@ -15,5 +15,5 @@ module.exports = async (client, emoji) => {
   .setDescription(`__**Nom de l'emoji**__: ${emoji.name}\n __**Emoji**__: <:${emoji.name}:${emoji.id}>\n __**Emoji créé par**__: ${executor.tag}`)
   .setColor("#00BFFF")
 
-  client.channels.cache.get('835906671624716289').send(embed);
+  client.channels.cache.get('846831210289168384').send(embed);
 }
