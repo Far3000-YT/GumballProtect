@@ -58,9 +58,9 @@ module.exports = async (client,messageReaction, user) => {
   }
 
 
-  const newsRole = message.guild.roles.cache.get('835934922672701466');
-  const gwRole = message.guild.roles.cache.get('835934662815514655');
-  const partRole = message.guild.roles.cache.get('835934655697125417');
+  const newsRole = message.guild.roles.cache.get('846841817776521266');
+  const gwRole = message.guild.roles.cache.get('846841873649369118');
+  const partRole = message.guild.roles.cache.get('846841670053003289');
 
   if (member.user.bot) return;
   
