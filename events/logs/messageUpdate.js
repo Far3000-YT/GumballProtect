@@ -6,5 +6,5 @@ module.exports = async (client, oldMessage, newMessage) => {
   .setDescription(`__**Message modifié**__: ${oldMessage} ==> ${newMessage}\n __**Auteur du message**__: ${newMessage.author}`)
   .setColor("#00BFFF")
 
-  client.channels.cache.get('835906671624716289').send(embed);
+  client.channels.cache.get('846831210289168384').send(embed);
 }
