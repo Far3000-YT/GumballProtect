@@ -15,5 +15,5 @@ module.exports = async (client, message) => {
   .setDescription(`__**Message supprimé**__: ${message.content}\n __**Message supprimé par**__: ${executor.tag}`)
   .setColor("#00BFFF")
 
-  client.channels.cache.get('835906671624716289').send(embed);
+  client.channels.cache.get('846831210289168384').send(embed);
 }
