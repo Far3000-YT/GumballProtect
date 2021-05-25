@@ -15,5 +15,5 @@ module.exports = async (client, role) => {
   .setDescription(`__**Rôle supprimé**__: ${role.name}\n __**Rôle supprimé par**__: ${executor.tag}`)
   .setColor("#00BFFF")
 
-  client.channels.cache.get('835906671624716289').send(embed);
+  client.channels.cache.get('846831210289168384').send(embed);
 }
