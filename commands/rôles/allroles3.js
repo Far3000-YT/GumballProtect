@@ -3,14 +3,14 @@ const { MessageEmbed } = require('discord.js');
 module.exports.run = (client,message,args) => {
   
   const embed = new MessageEmbed()
-  .setTitle("Notifications")
-  .setDescription("<a:alerte:835919931434467378> : News \n<a:giveaway2:835920882319884350> : Giveaways \n<a:love:835920118303031306> : Parteneriats")
+  .setTitle("Notification Roles")
+  .setDescription("<a:news:846845623784570970> : News role \n<a:giveaway:846845623662542848> : Giveaways role \n<a:partner:846848375281418311> : Partnerships notification role")
   .setColor("#00BFFF")
 
-  client.channels.cache.get('839150422652223538').send(embed).then(message => {
-    message.react('835919931434467378');
-    message.react('835920882319884350');
-    message.react('835920118303031306');
+  client.channels.cache.get('846840240135733299').send(embed).then(message => {
+    message.react('846845623784570970');
+    message.react('846845623662542848');
+    message.react('846848375281418311');
   })
 }
 
