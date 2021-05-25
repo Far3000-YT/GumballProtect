@@ -41,15 +41,15 @@ module.exports = (client,messageReaction, user) => {
   
   if (member.user.bot) return;
 
-  if (["alerte","giveaway2","love"].includes(emoji)) {
+  if (["news","giveaway","partner"].includes(emoji)) {
     switch(emoji) {
-      case "alerte":
+      case "news":
         member.roles.remove(newsRole);
         break;
-      case "giveaway2":
+      case "giveaway":
         member.roles.remove(gwRole);
         break;
-      case "love":
+      case "partner":
         member.roles.remove(partRole);
         break;
     }
