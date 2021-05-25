@@ -69,7 +69,7 @@ module.exports = async (client,messageReaction, user) => {
     return;
   }
 
-  if (["alerte","giveaway2","love"].includes(emoji)) {
+  if (["news","giveaway","partner"].includes(emoji)) {
     switch(emoji) {
       case "news":
         member.roles.add(newsRole);
