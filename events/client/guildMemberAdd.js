@@ -7,5 +7,5 @@ module.exports = (client, member) => {
     .setColor("#32CD32")
     .setTimeStamp();
 
-    client.channels.cache.get('835906671624716289').send(embed);
+    client.channels.cache.get('846831210289168384').send(embed);
   }
