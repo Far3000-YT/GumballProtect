@@ -71,13 +71,13 @@ module.exports = async (client,messageReaction, user) => {
 
   if (["alerte","giveaway2","love"].includes(emoji)) {
     switch(emoji) {
-      case "alerte":
+      case "news":
         member.roles.add(newsRole);
         break;
-      case "giveaway2":
+      case "giveaway":
         member.roles.add(gwRole);
         break;
-      case "love":
+      case "partner":
         member.roles.add(partRole);
         break;
     }
