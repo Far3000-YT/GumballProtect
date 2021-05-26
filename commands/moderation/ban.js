@@ -17,7 +17,7 @@ module.exports.run = (client,message,args) => {
 module.exports.help = {
   name: 'ban',
   description: "Ban un utilisateur",
-  usage: '<@utilisateur> <raison>',
+  usage: '<@user> <reason>',
   isUserAdmin: true,
   permissions: true,
   args: true
