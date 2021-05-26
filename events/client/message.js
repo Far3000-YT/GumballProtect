@@ -13,18 +13,18 @@ module.exports = async (client, message) => {
   if (!client.commands.has(commandName)) return;
   const command = client.commands.get(commandName);
 
-  if (command.help.permissions && !message.member.hasPermission('KICK_MEMBERS')) return message.reply("Tu n'as pas les permissions nécessaires pour utiliser cette commande")
+  if (command.help.permissions && !message.member.hasPermission('KICK_MEMBERS')) return message.reply("You do not have enough permissions to use this command !")
 
   if (command.help.args && !args.length) {
-    let noArgsReply = `${message.author}, il faut un argument pour cette commande !`;
+    let noArgsReply = `${message.author}, you need to add an argument for this command !`;
 
-    if (command.help.usage) noArgsReply += `\nVoici comment utiliser la commande : \`${PREFIX}${command.help.name} ${command.help.usage}\``
+    if (command.help.usage) noArgsReply += `\nThis is how to use the command : \`${PREFIX}${command.help.name} ${command.help.usage}\``
 
     return message.channel.send(noArgsReply);
   }
 
-  if (command.help.isUserAdmin && !user) return message.reply("Il faut mentionner un utilisateur !")
-  if (command.help.isUserAdmin && message.guild.member(message.mentions.users.first()).hasPermission('KICK_MEMBERS')) return message.reply("Tu ne peux pas utiliser cette commande sur cet utilisateur !")
+  if (command.help.isUserAdmin && !user) return message.reply("You have to mention the user !")
+  if (command.help.isUserAdmin && message.guild.member(message.mentions.users.first()).hasPermission('KICK_MEMBERS')) return message.reply("You can't use this command on a user !")
 
   command.run(client, message, args, settings);
 }
