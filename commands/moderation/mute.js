@@ -27,11 +27,11 @@ module.exports.run = async (client,message,args) => {
   await user.roles.add(muteRole.id);
   const embed = new MessageEmbed()
   .setTitle("Mute")
-  .setDescription(`**L'utilisateur ${user} est muté par ${message.author.tag} !**\n __**Raison**__: ${reason}\n __**Temps**__: ${ms(ms(muteTime))}`)
+  .setDescription(`**${user} has been muted by ${message.author.tag} !**\n __**Reason**__: ${reason}\n __**Time**__: ${ms(ms(muteTime))}`)
   .setColor("#FFD700")
 
   message.channel.send(embed);
-  client.channels.cache.get('835906671624716289').send(embed);
+  client.channels.cache.get('846831210289168384').send(embed);
 
   setTimeout(() => {
     user.roles.remove(muteRole.id);
@@ -41,7 +41,7 @@ module.exports.run = async (client,message,args) => {
 module.exports.help = {
   name: 'mute',
   description: "Mute un utilisateur",
-  usage: '<@utilisateur> <temps> <raison>',
+  usage: '<@user> <time> <reason>',
   isUserAdmin: true,
   permissions: true,
   args: true
