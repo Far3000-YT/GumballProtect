@@ -4,22 +4,22 @@ module.exports.run = (client,message,args) => {
   let user = message.guild.member(message.mentions.users.first());
   let muteRole = message.guild.roles.cache.find(r => r.name === "muted");
 
-  if (!user.roles.cache.has(muteRole.id)) return message.reply("L'utilisateur mentionné n'est pas muté !")
+  if (!user.roles.cache.has(muteRole.id)) return message.reply("The tagged user is not muted !")
 
   user.roles.remove(muteRole.id);
   const embed = new MessageEmbed()
   .setTitle("Mute")
-  .setDescription(`L'utilisateur ${user} est désormais unmuté !`)
+  .setDescription(`${user} is now unmuted !`)
   .setColor("#32CD32")
 
   message.channel.send(embed);
-  client.channels.cache.get('835906671624716289').send(embed);
+  client.channels.cache.get('846831210289168384').send(embed);
 };
 
 module.exports.help = {
   name: 'unmute',
   description: "Unmute un utilisateur",
-  usage: '<@utilisateur>',
+  usage: '<@user>',
   isUserAdmin: true,
   permissions: true,
   args: true
