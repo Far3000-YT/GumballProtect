@@ -3,12 +3,12 @@ module.exports = (client,messageReaction, user) => {
   const member = message.guild.members.cache.get(user.id);
   const emoji = messageReaction.emoji.name;
   const channel = message.guild.channels.cache.find(c => c.id === '835898278876938270');
-  const rougeRole = message.guild.roles.cache.get('835933265328078899');
-  const orangeRole = message.guild.roles.cache.get('835933437918576750');
-  const jauneRole = message.guild.roles.cache.get('835933404360867922');
-  const vertRole = message.guild.roles.cache.get('835933371552366632');
-  const bleuRole = message.guild.roles.cache.get('835933337046220880');
-  const violetRole = message.guild.roles.cache.get('835933511872675850');
+  const rougeRole = message.guild.roles.cache.get('854260214550495232');
+  const orangeRole = message.guild.roles.cache.get('854260215292362802');
+  const jauneRole = message.guild.roles.cache.get('854260216043405332');
+  const vertRole = message.guild.roles.cache.get('854260216723537931');
+  const bleuRole = message.guild.roles.cache.get('854260217454133289');
+  const violetRole = message.guild.roles.cache.get('854260218333757451');
 
   if (member.user.bot) return;
 
@@ -35,21 +35,21 @@ module.exports = (client,messageReaction, user) => {
     }
   }
 
-  const newsRole = message.guild.roles.cache.get('846841817776521266');
-  const gwRole = message.guild.roles.cache.get('846841873649369118');
-  const partRole = message.guild.roles.cache.get('846841670053003289');
+  const newsRole = message.guild.roles.cache.get('854260226320629760');
+  const gwRole = message.guild.roles.cache.get('854260225121320981');
+  const partRole = message.guild.roles.cache.get('854260224834404384');
   
   if (member.user.bot) return;
 
-  if (["news","giveaway","partner"].includes(emoji)) {
+  if (["pin","giveaway2","love"].includes(emoji)) {
     switch(emoji) {
-      case "news":
+      case "pin":
         member.roles.remove(newsRole);
         break;
-      case "giveaway":
+      case "giveaway2":
         member.roles.remove(gwRole);
         break;
-      case "partner":
+      case "love":
         member.roles.remove(partRole);
         break;
     }
