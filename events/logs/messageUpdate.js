@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = async (client, oldMessage, newMessage) => {
-  if (<message>.author.bot) return;
+  if (newMessage.author.bot) return;
   const embed = new MessageEmbed()
   .setAuthor("Modification d'un message")
   .setDescription(`__**Message modifié**__: ${oldMessage} ==> ${newMessage}\n __**Auteur du message**__: ${newMessage.author}`)
