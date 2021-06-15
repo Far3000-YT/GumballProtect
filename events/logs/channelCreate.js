@@ -15,5 +15,5 @@ module.exports = async (client, channel) => {
   .setDescription(`__**Nom du salon**__: ${channel.name}\n __**Salon créé par**__: ${executor.tag}`)
   .setColor("#00BFFF")
 
-  client.channels.cache.get('846831210289168384').send(embed);
+  client.channels.cache.get('854260261611241492').send(embed);
 }
