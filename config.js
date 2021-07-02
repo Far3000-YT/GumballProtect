@@ -1,5 +1,5 @@
 module.exports = {
-    TOKEN: "ODM2MzAxNjU2MDIyNTgxMzA5.YIcAnA.LmxG4k8rDmipA5NhAF_vT3mKXSA",
+    TOKEN: "ODU5MDcwNTc2MTQzMTA2MDQ4.YNnV0g.jUi9eeP3DgnqKLPlXtb2EkksW94",
     PREFIX: "=",
     DBCONNECTION: "mongodb+srv://Far3000:Gunfive2030@gumballrewards.6kbpx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     DEFAULTSETTINGS: {
