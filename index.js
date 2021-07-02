@@ -12,4 +12,4 @@ loadCommands(client);
 loadEvents(client);
 client.mongoose.init();
 
-client.login(process.env.CLE);
+client.login(TOKEN);
